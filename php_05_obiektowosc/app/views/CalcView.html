@@ -1,4 +1,4 @@
-{extends file="../templates/main.html"}
+{extends file="main.html"}
 
 {block name=footer}{/block}
 		
@@ -21,7 +21,7 @@
 						</div>
 						<nav>
 							<ul>
-								<li><a href="{$conf->app_url}">Home</a></li>
+								<li><a href="#">Home</a></li>
 								<li><a href="#kalkulator">Kalkulator</a></li>
 							</ul>
 						</nav>
@@ -38,7 +38,7 @@
 						<!-- Contact -->
 							<article id="kalkulator">
 								<h2 class="major">Kalkulator</h2>
-								<form method="post" action="{$conf->app_url}/app/calc.php#kalkulator">
+								<form method="post" action="{$conf->action_root}calcCompute#kalkulator">
 									<div class="fields">
 										<div class="field">
 						
@@ -84,12 +84,12 @@
 								</ol>
 								{/if}
 
-								{if isset($rata->rata)}
+								{if isset($res->rata)}
                    					<h2>Wynik:</h2>
                    					<div>
-                   					<p>Miesięczna rata: {$rata->rata} PLN</p>
-                   					<p>Całkowity koszt kredytu: {$calkowita_platnosc->calkowita_platnosc} PLN</p>
-                   					<p>Koszt odsetek: {$odsetki->odsetki} PLN</p>
+                   					<p>Miesięczna rata: {$res->rata} PLN</p>
+                   					<p>Całkowity koszt kredytu: {$res->calkowita_platnosc} PLN</p>
+                   					<p>Koszt odsetek: {$res->odsetki} PLN</p>
                    					</div>
                					{/if}
 							</article>

@@ -1,18 +1,18 @@
 <?php
-/* Smarty version 4.3.1, created on 2023-04-24 20:02:10
-  from 'E:\dev\xampp\htdocs\paw\php_05_obiektowosc1\app\CalcView.html' */
+/* Smarty version 4.3.1, created on 2023-05-08 23:59:49
+  from 'E:\dev\xampp\htdocs\paw\php_05_obiektowosc\app\views\CalcView.html' */
 
 /* @var Smarty_Internal_Template $_smarty_tpl */
 if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   'version' => '4.3.1',
-  'unifunc' => 'content_6446c4223f6330_79372899',
+  'unifunc' => 'content_645970d56cd488_42423513',
   'has_nocache_code' => false,
   'file_dependency' => 
   array (
-    '38cfd11f70a70d9fd960942237d9ae716f469ae3' => 
+    'becb49f711c29ec4e5a7c305fadfa77c36238c18' => 
     array (
-      0 => 'E:\\dev\\xampp\\htdocs\\paw\\php_05_obiektowosc1\\app\\CalcView.html',
-      1 => 1682359329,
+      0 => 'E:\\dev\\xampp\\htdocs\\paw\\php_05_obiektowosc\\app\\views\\CalcView.html',
+      1 => 1683583187,
       2 => 'file',
     ),
   ),
@@ -20,30 +20,30 @@ if ($_smarty_tpl->_decodeProperties($_smarty_tpl, array (
   array (
   ),
 ),false)) {
-function content_6446c4223f6330_79372899 (Smarty_Internal_Template $_smarty_tpl) {
+function content_645970d56cd488_42423513 (Smarty_Internal_Template $_smarty_tpl) {
 $_smarty_tpl->_loadInheritance();
 $_smarty_tpl->inheritance->init($_smarty_tpl, true);
 ?>
 
 
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1710608176446c4223d8f52_20358813', 'footer');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_801800877645970d56b92c5_74287497', 'footer');
 ?>
 
 		
 <?php 
-$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_14037590516446c4223d98f1_23454569', 'content');
+$_smarty_tpl->inheritance->instanceBlock($_smarty_tpl, 'Block_1468487322645970d56b9bd4_73363778', 'content');
 ?>
 
-<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "../templates/main.html");
+<?php $_smarty_tpl->inheritance->endChild($_smarty_tpl, "main.html");
 }
 /* {block 'footer'} */
-class Block_1710608176446c4223d8f52_20358813 extends Smarty_Internal_Block
+class Block_801800877645970d56b92c5_74287497 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'footer' => 
   array (
-    0 => 'Block_1710608176446c4223d8f52_20358813',
+    0 => 'Block_801800877645970d56b92c5_74287497',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -51,12 +51,12 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 }
 /* {/block 'footer'} */
 /* {block 'content'} */
-class Block_14037590516446c4223d98f1_23454569 extends Smarty_Internal_Block
+class Block_1468487322645970d56b9bd4_73363778 extends Smarty_Internal_Block
 {
 public $subBlocks = array (
   'content' => 
   array (
-    0 => 'Block_14037590516446c4223d98f1_23454569',
+    0 => 'Block_1468487322645970d56b9bd4_73363778',
   ),
 );
 public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
@@ -80,8 +80,7 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 						</div>
 						<nav>
 							<ul>
-								<li><a href="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
-">Home</a></li>
+								<li><a href="#">Home</a></li>
 								<li><a href="#kalkulator">Kalkulator</a></li>
 							</ul>
 						</nav>
@@ -98,8 +97,8 @@ public function callBlock(Smarty_Internal_Template $_smarty_tpl) {
 						<!-- Contact -->
 							<article id="kalkulator">
 								<h2 class="major">Kalkulator</h2>
-								<form method="post" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->app_url;?>
-/app/calc.php#kalkulator">
+								<form method="post" action="<?php echo $_smarty_tpl->tpl_vars['conf']->value->action_root;?>
+calcCompute#kalkulator">
 									<div class="fields">
 										<div class="field">
 						
@@ -160,14 +159,14 @@ $_smarty_tpl->smarty->ext->_foreach->restore($_smarty_tpl, 1);?>
 								</ol>
 								<?php }?>
 
-								<?php if ((isset($_smarty_tpl->tpl_vars['rata']->value->rata))) {?>
+								<?php if ((isset($_smarty_tpl->tpl_vars['res']->value->rata))) {?>
                    					<h2>Wynik:</h2>
                    					<div>
-                   					<p>Miesięczna rata: <?php echo $_smarty_tpl->tpl_vars['rata']->value->rata;?>
+                   					<p>Miesięczna rata: <?php echo $_smarty_tpl->tpl_vars['res']->value->rata;?>
  PLN</p>
-                   					<p>Całkowity koszt kredytu: <?php echo $_smarty_tpl->tpl_vars['calkowita_platnosc']->value->calkowita_platnosc;?>
+                   					<p>Całkowity koszt kredytu: <?php echo $_smarty_tpl->tpl_vars['res']->value->calkowita_platnosc;?>
  PLN</p>
-                   					<p>Koszt odsetek: <?php echo $_smarty_tpl->tpl_vars['odsetki']->value->odsetki;?>
+                   					<p>Koszt odsetek: <?php echo $_smarty_tpl->tpl_vars['res']->value->odsetki;?>
  PLN</p>
                    					</div>
                					<?php }?>
