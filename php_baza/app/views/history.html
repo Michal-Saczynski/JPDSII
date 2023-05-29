@@ -1,0 +1,28 @@
+<table id="tab_people" class="pure-table pure-table-bordered">
+    <thead>
+        <tr>
+            <th>Kwota</th>
+            <th>oprocentowanie</th>
+            <th>Czas</th>
+            <th>Rata</th>
+            <!-- {if inRole('admin')}
+                <th>Opcje</th>
+            {/if} -->
+        </tr>
+    </thead>
+    <tbody>
+    {foreach $record as $r}
+    {strip}
+        <tr>
+            <td>{$r["kwota"]}</td>
+            <td>{$r["oprocentowanie"]}</td>
+            <td>{$r["czas"]}</td>
+            <td>{$r["rata"]}</td>
+            <!-- <td>
+                <a href="{$conf->action_url}wynikDelete&id={$r['idwynik']}">Usuń</a>
+            </td> -->
+        </tr>
+    {/strip}
+    {/foreach}
+    </tbody>
+    </table>
